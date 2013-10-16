@@ -1,6 +1,6 @@
 [user]
 	name = Robert Lynch
-	email = robert.lynch@rackspace.com
+	email = rmlynch@utexas.edu
 [merge]
 	tool = vimdiff
 [core]
@@ -9,9 +9,9 @@
 	st = status
 	ci = commit
 	co = checkout
-    stashco = checkout stash@{0} -- 
+	stashco = checkout stash@{0} -- 
 	vimdiff = difftool -y -t vimdiff
-    ls = log --stat --abbrev-commit
+	ls = log --stat --abbrev-commit
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [color]
 	branch = auto
