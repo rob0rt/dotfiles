@@ -21,6 +21,3 @@ fi
 # Reset color for command output
 # (this one is invoked every time before a command is executed):
 trap 'echo -ne "\033[0m"' DEBUG
-
-
-
