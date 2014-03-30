@@ -8,6 +8,11 @@ if [ ! -L ~/.bash ]; then
   ln -s $PWD/.bash ~/
 fi
 
+# zsh configs
+if [ ! -L ~/.zshrc ]; then
+  ln -s $PWD/.zshrc ~/
+fi
+
 # vimrc
 if [ ! -L ~/.vimrc ]; then
   ln -s $PWD/.vimrc ~/
