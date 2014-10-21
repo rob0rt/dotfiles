@@ -31,3 +31,7 @@ execute pathogen#infect()
 " Vim Airline                                                                   
 let g:airline_left_sep=''                                                      
 let g:airline_right_sep=''
+
+" Syntax highlighting
+filetype plugin indent on
+syntax on
