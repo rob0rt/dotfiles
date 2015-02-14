@@ -13,5 +13,8 @@ git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 # Nerdtree
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
+# Rust
+git clone https://github.com/wting/rust.vim.git ~/.vim/bundle/rust.vim
+
 # Oh My Zsh
 curl -L http://install.ohmyz.sh | sh
