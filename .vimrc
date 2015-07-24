@@ -16,7 +16,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-# Lin numbers
+" Line numbers
 set number
 
 " Force syntax highlighting
