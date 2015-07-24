@@ -3,11 +3,11 @@ my dot and configuration files
 
 ## Install
 Install things from apt-get
-```
+```sh
 sudo apt-get install git curl
 ```
 
 Run the magic script to get the configs:
-```
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/BobertForever/dotfiles/master/configure.sh)"
 ```
