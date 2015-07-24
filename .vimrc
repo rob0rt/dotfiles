@@ -16,7 +16,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-set colorcolumn=80
+# Lin numbers
+set number
 
 " Force syntax highlighting
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
@@ -30,6 +31,9 @@ map<C-L> <C-W>l
 
 " Pathogen
 execute pathogen#infect()
+
+" NERD Tree
+map <C-n> :NERDTreeToggle<CR>
 
 " Vim Airline
 let g:airline_left_sep=''
