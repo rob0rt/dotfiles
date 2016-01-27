@@ -1,22 +1,24 @@
 [user]
-	name = Robert Lynch
-	email = robertlynch2012@gmail.com
+  name = Robert Lynch
+  email = robertlynch2012@gmail.com
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [core]
-	editor = vim
+  editor = vim
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	stashco = checkout stash@{0} -- 
-	vimdiff = difftool -y -t vimdiff
-	ls = log --stat --abbrev-commit
-	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  st = status
+  ci = commit
+  co = checkout
+  stashco = checkout stash@{0} -- 
+  vimdiff = difftool -y -t vimdiff
+  ls = log --stat --abbrev-commit
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [color]
-	branch = auto
-	interactive = auto
-	status = auto
-	diff = auto
+  branch = auto
+  interactive = auto
+  status = auto
+  diff = auto
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+[push]
+  default = simple

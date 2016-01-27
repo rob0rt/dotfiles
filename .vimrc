@@ -1,3 +1,13 @@
+" vim-plug
+call plug#begin()
+
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'wting/rust.vim'
+
+call plug#end()
+
 " Always show statusline
 set laststatus=2
 
@@ -10,14 +20,14 @@ highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=black
 highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 
+" 80 column
+set colorcolumn=80
+
 " Tabbing
 set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-" Line numbers
-set number
 
 " Force syntax highlighting
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
@@ -28,9 +38,6 @@ map<C-H> <C-W>h
 map<C-J> <C-W>j
 map<C-K> <C-W>k
 map<C-L> <C-W>l
-
-" Pathogen
-execute pathogen#infect()
 
 " NERD Tree
 map <C-n> :NERDTreeToggle<CR>

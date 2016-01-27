@@ -1,28 +1,27 @@
 #!/bin/bash
 
-# Pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# vim-plug
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Airline
-git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+# vim config
+[ -e ~/.config/nvim/init.vim ] && mv ~/.config/nvim/init.vim.backup
+[ -e ~/.vimrc ] && mv ~/.vimrc.backup
+curl -fLo ~/.config/nvim/init.vim --create-dirs \
+  https://raw.githubusercontent.com/BobertForever/dotfiles/master/.vimrc
+ls -s ~/.config/nvim/init.vim ~/.vimrc
 
-# Ctrlp
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+# tmux config
+[ -e ~/.tmux.conf ] && mv ~/.tmux.conf.backup
+curl -fLo ~/.tmux.conf \
+  https://raw.githubusercontent.com/BobertForever/dotfiles/master/.tmux.conf
 
-# Nerdtree
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-
-# Rust
-git clone https://github.com/wting/rust.vim.git ~/.vim/bundle/rust.vim
-
-# Hack
-git clone git://github.com/hhvm/vim-hack.git ~/.vim/bundle/vim-hack
-
-# Vimrc/ Tmux config/ Git config
-wget https://raw.githubusercontent.com/BobertForever/dotfiles/master/.vimrc -P ~/
-wget https://raw.githubusercontent.com/BobertForever/dotfiles/master/.tmux.conf -P ~/
-wget https://raw.githubusercontent.com/BobertForever/dotfiles/master/.gitconfig -P ~/
+# git config
+[ -e ~/.gitconfig ] && mv ~/.gitconfig.backup
+curl -fLo ~/.gitconfig \
+  https://raw.githubusercontent.com/BobertForever/dotfiles/master/.gitconfig
 
 # Oh My Zsh
-curl -L http://install.ohmyz.sh | sh
+if [ ! -d ~/.oh-my-zsh ] then
+  curl -L http://install.ohmyz.sh | sh
+fi
