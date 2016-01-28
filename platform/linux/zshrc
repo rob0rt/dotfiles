@@ -41,7 +41,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$HOME/neovim/bin:$HOME/.ellipsis/bin:$PATH"
 
 alias clingo=/projects/tag/clingo-4.5.4-linux-x86_64/clingo
 alias vim=nvim
+
+# Set the PS1 to a dollar sign for dumb terminals; used for emacs
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ '
