@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export PATH="/lusr/opt/pintos/:/lusr/opt/bochs-2.2.6-pintos/bin/:/lusr/opt/qemu-1.1.1/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/bin/tex:/u/rmlynch/.lib/usr/bin/:/lusr/opt/condor/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/bin/tex:/lusr/opt/condor/bin"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
