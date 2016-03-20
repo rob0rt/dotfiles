@@ -10,14 +10,22 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(git autojump)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
 # User Customization
 
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
 # RVM / Ruby
-export PATH="$PATH:$HOME/.rvm/bin"
+if [ -d "$HOME/.rvm" ]; then
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
 
 # Hub
-eval "$(hub alias -s)"
+if command_exists hub; then 
+  eval "$(hub alias -s)"
+fi
