@@ -1,0 +1,23 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/rmlynch/.oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(git autojump)
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+source $ZSH/oh-my-zsh.sh
+
+# User Customization
+
+# RVM / Ruby
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Hub
+eval "$(hub alias -s)"
