@@ -26,6 +26,6 @@ if [ -d "$HOME/.rvm" ]; then
 fi
 
 # Hub
-if command_exists hub; then 
+if command_exists hub; then
   eval "$(hub alias -s)"
 fi

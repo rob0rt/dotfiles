@@ -1,10 +1,15 @@
 " vim-plug
 call plug#begin()
 
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'wting/rust.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -22,6 +27,10 @@ highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 
 " 80 column
 set colorcolumn=80
+
+" Numbers
+set relativenumber
+set cursorline
 
 " Tabbing
 set smartindent
@@ -43,9 +52,17 @@ map<C-L> <C-W>l
 map <C-n> :NERDTreeToggle<CR>
 
 " Vim Airline
+let g:AirlineTheme='solarized dark'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 " Syntax highlighting
 filetype plugin indent on
-syntax on
+syntax enable
+
+" Color Scheme
+set background=dark
+colorscheme solarized
+
+" Git gutter
+let g:gitgutter_sign_column_always = 1

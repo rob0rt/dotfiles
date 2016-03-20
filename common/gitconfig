@@ -5,6 +5,7 @@
   tool = vimdiff
 [core]
   editor = vim
+	excludesfile = ~/.gitignore_global
 [alias]
   st = status
   ci = commit
