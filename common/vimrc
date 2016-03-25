@@ -8,8 +8,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'wting/rust.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'flowtype/vim-flow'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'valloric/youcompleteme'
 
 call plug#end()
 
@@ -60,9 +62,22 @@ let g:airline_right_sep=''
 filetype plugin indent on
 syntax enable
 
+" Flow
+let g:flow#autoclose=1
+
 " Color Scheme
 set background=dark
 colorscheme solarized
 
 " Git gutter
 let g:gitgutter_sign_column_always = 1
+
+" Platform specific configurations
+let s:uname = system("uname -s")
+if s:uname == "Darwin\n"
+
+  " Cursor shape configuration
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+endif

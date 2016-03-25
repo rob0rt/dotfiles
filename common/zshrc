@@ -3,12 +3,9 @@ export ZSH=/Users/rmlynch/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git autojump)
+plugins=(git autojump docker)
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
@@ -28,4 +25,9 @@ fi
 # Hub
 if command_exists hub; then
   eval "$(hub alias -s)"
+fi
+
+# Pick which vim to use
+if command_exists neovim; then
+  alias vim=neovim
 fi
