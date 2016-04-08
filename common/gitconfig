@@ -1,7 +1,7 @@
 [user]
   name = Robert Lynch
   email = robertlynch2012@gmail.com
-	signingkey = 6762DBF4
+  signingkey = 6762DBF4
 [merge]
   tool = vimdiff
 [core]
@@ -25,8 +25,8 @@
 [push]
   default = simple
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [commit]
-	gpgsign = true
+  gpgsign = true
