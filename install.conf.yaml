@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+    ~/.vimrc:
+    ~/.tmux.conf:
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall']

@@ -1,0 +1,24 @@
+[user]
+  email = robertlynch2012@gmail.com
+  name = Robert Lynch
+  signingkey = EBE2DFEB6762DBF4
+[commit]
+  gpgsign = true
+[core]
+  editor = vim
+[merge]
+  tool = vimdiff
+[diff]
+  tool = vimdiff
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  vimdiff = difftool -y -t vimdiff
+  ls = log --stat --abbrev-commit
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[color]
+  branch = auto
+  interactive = auto
+  status = auto
+  diff = auto
