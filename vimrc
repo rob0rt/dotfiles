@@ -1,16 +1,10 @@
-" Download vim-plug if missing
-if empty(glob("~/.vim/autoload/plug.vim"))
-  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * silent! PlugInstall
-endif
-
 " Install plugins
-silent! if plug#begin()
-  Plug 'kien/ctrlp.vim'
-  Plug 'scrooloose/nerdtree'
+call plug#begin()
 
-  call plug#end()
-endif
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
 
 " Always show statusline
 set laststatus=2
