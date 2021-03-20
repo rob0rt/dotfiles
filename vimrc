@@ -3,6 +3,7 @@ call plug#begin()
 
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'valloric/youcompleteme'
 
 call plug#end()
 

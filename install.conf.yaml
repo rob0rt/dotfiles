@@ -12,5 +12,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./vim/install.sh, Installing Vim Plug]
+  - [./vim/install-vim-plug, Installing Vim Plug]
   - [vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall', Installing Vim Plugins]
+  - [./vim/install-ycm, Installing YouCompleteMe]
