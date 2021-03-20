@@ -1,9 +1,17 @@
 " Install plugins
 call plug#begin()
 
+" File traversal
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
+
+" LSP
+Plug 'sheerun/vim-polyglot'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
 
@@ -64,3 +72,9 @@ if s:uname == "Darwin\n"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 endif
+
+" Svelte
+let g:svelte_preprocessor_tags = [
+  \ { 'name': 'ts', 'tag': 'script', 'as': 'typescript' }
+  \ ]
+let g:svelte_preprocessors = ['ts']
