@@ -1,19 +1,32 @@
+" Function to compile YouCompleteMe
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+" Install Vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * silent! PlugInstall
+endif
+
 " Install plugins
-call plug#begin()
+silent! if plug#begin()
+	" File traversal
+	Plug 'kien/ctrlp.vim'
+	Plug 'scrooloose/nerdtree'
+	Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 
-" File traversal
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'valloric/youcompleteme'
+	" LSP
+	Plug 'sheerun/vim-polyglot'
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'mattn/vim-lsp-settings'
+	Plug 'prabirshrestha/asyncomplete.vim'
+	Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
-" LSP
-Plug 'sheerun/vim-polyglot'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-call plug#end()
+	call plug#end()
+endif
 
 " Always show statusline
 set laststatus=2
@@ -62,16 +75,6 @@ let g:flow#autoclose=1
 
 " Git gutter
 let g:gitgutter_sign_column_always = 1
-
-" Platform specific configurations
-let s:uname = system("uname -s")
-if s:uname == "Darwin\n"
-
-  " Cursor shape configuration
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
-endif
 
 " Svelte
 let g:svelte_preprocessor_tags = [
