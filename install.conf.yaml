@@ -9,8 +9,8 @@
     ~/.gitconfig:
     ~/.vimrc:
     ~/.tmux.conf:
+    ~/.zshrc:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo apt-get install --yes build-essential cmake vim-nox python3-dev]
   - [vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall', Installing Vim Plugins]

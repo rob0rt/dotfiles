@@ -1,10 +1,3 @@
-" Function to compile YouCompleteMe
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
 " Install Vim-plug
 if empty(glob("~/.vim/autoload/plug.vim"))
   silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
@@ -16,7 +9,6 @@ silent! if plug#begin()
 	" File traversal
 	Plug 'kien/ctrlp.vim'
 	Plug 'scrooloose/nerdtree'
-	Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 
 	" LSP
 	Plug 'sheerun/vim-polyglot'
