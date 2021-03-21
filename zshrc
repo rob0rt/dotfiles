@@ -1,3 +1,5 @@
+# Prompt Customization
+
 function __git_prompt_git() {
   GIT_OPTIONAL_LOCKS=0 command git "$@"
 }
@@ -26,3 +28,13 @@ local git_info='$(git_prompt_info)'
 
 PROMPT="╭─%F{040}%n %F{239}@ %F{033}%m %F{239}at%F{98}%t %F{239}in %B%F{226}%~%b${git_info}%{$reset_color%}
 ╰─○ "
+
+# Command Aliases
+
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
+if command_exists exa; then
+  alias ls=exa
+fi
