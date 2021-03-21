@@ -12,7 +12,6 @@ function parse_git_dirty {
   local gitstat
   gitstat=$(__git_prompt_git status --porcelain 2> /dev/null | tail -1)
 
-	# Dirty
   if [[ -n $gitstat ]]; then
     echo "%F{202}✘"
   else
