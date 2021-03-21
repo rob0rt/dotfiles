@@ -14,9 +14,9 @@ function parse_git_dirty {
 
 	# Dirty
   if [[ -n $gitstat ]]; then
-		echo "%F{202}✘"
+    echo "%F{202}✘"
   else
-	  echo "%F{040}✔"
+    echo "%F{040}✔"
   fi
 }
 
