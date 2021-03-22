@@ -45,3 +45,9 @@ command_exists () {
 if command_exists exa; then
   alias ls=exa
 fi
+
+# PATH Configuration
+
+if [ -d ~/.npm-global/bin ]; then
+  export PATH=~/.npm-global/bin:$PATH
+fi
