@@ -33,7 +33,7 @@ setopt promptsubst
 
 local git_info='$(git_prompt_info)'
 
-PROMPT="╭─%F{040}%n %F{239}@ %F{033}%m %F{239}at%F{98}%t %F{239}in %B%F{226}%~%b${git_info}%{$reset_color%}
+PROMPT="╭─%F{040}%n %F{239}@ %F{033}%m %F{239}at %F{98}%t %F{239}in %B%F{226}%~%b${git_info}%{$reset_color%}
 ╰─○ "
 
 # Command Aliases
