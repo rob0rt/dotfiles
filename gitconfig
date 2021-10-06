@@ -1,5 +1,5 @@
 [user]
-  email = robertlynch2012@gmail.com
+	email = robert@ed.link
   name = Robert Lynch
   signingkey = EBE2DFEB6762DBF4
 [commit]
@@ -22,3 +22,12 @@
   interactive = auto
   status = auto
   diff = auto
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true

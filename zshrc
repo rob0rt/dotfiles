@@ -51,3 +51,21 @@ fi
 if [ -d ~/.npm-global/bin ]; then
   export PATH=~/.npm-global/bin:$PATH
 fi
+
+if [ -d ~/.cargo/bin ]; then
+  export PATH=~/.cargo/bin:$PATH
+fi
+
+if command -v yarn &> /dev/null; then
+  export PATH="$(yarn global bin):$PATH"
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rmlynch/Documents/google-cloud-sdk/path.zsh.inc' ]; then
+  . '/Users/rmlynch/Documents/google-cloud-sdk/path.zsh.inc';
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rmlynch/Documents/google-cloud-sdk/completion.zsh.inc' ]; then
+  . '/Users/rmlynch/Documents/google-cloud-sdk/completion.zsh.inc';
+fi
